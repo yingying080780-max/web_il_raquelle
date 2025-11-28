@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langkah Bersama Menuju Kesetaraan Gender (SDGs 5)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="TIKIL.css">
+    <style>
+        :root {
+            --sdgs-pink: #FF69B4;
+            --sdgs-purple: #9333ea; 
+        }
+        .sdgs-pink { color: var(--sdgs-pink); }
+        .bg-sdgs-pink-light { background-color: #fce7f3; } 
+        html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .side-menu {
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            padding-top: 2rem;
+        }
+        .dropdown-menu {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            overflow: hidden;
+            opacity: 1;
+        }
+        .dropdown-menu.collapsed {
+            max-height: 0 !important;
+            opacity: 0;
+        }
+        .dropdown-toggle {
+            transition: background-color 0.2s;
+        }
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+        @media (max-width: 1023px) {
+            .side-menu {
+                position: relative;
+                height: auto;
+                padding-top: 0;
+            }
+            .side-menu-mobile-hidden {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div id="top"></div> 
+    <main class="lg:grid lg:grid-cols-4 xl:grid-cols-5 min-h-screen">
+        
+        <nav id="sideMenu" class="side-menu bg-white shadow-xl lg:col-span-1 border-r border-pink-100 p-4 lg:p-6 transition-all duration-300">
+            <button id="mobileToggle" class="lg:hidden w-full text-left py-3 px-4 mb-4 rounded-lg bg-pink-50 text-pink-700 font-semibold flex justify-between items-center ring-2 ring-pink-200">
+                Menu Navigasi <i class="fas fa-bars"></i>
+            </button>
+
+            <ul id="menuContent" class="space-y-1 lg:space-y-2 text-sm lg:text-base side-menu-mobile-hidden">
+                <li>
+                    <a class="nav-link block p-3 rounded-lg hover:bg-pink-100 transition duration-150 font-semibold" href="#salam">
+                        <i class="fas fa-handshake mr-3 sdgs-pink"></i> Salam Redaksi
+                    </a>
+                </li>
+                <li>
+                    <button class="dropdown-toggle w-full text-left p-3 rounded-lg hover:bg-pink-100 transition duration-150 font-semibold flex justify-between items-center text-gray-700" data-target="dropdown-pengertian">
+                        <span class="truncate"><i class="fas fa-info-circle mr-3 text-purple-700"></i> Dasar SDGs & Kerjasama</span> <i class="fas fa-chevron-down arrow text-xs ml-2"></i>
+                    </button>
+                    <ul id="dropdown-pengertian" class="dropdown-menu ml-4 mt-1 space-y-1 bg-pink-50 rounded-lg p-1 text-gray-600 collapsed">
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#sdgs">Penjelasan Umum SDGs</a></li>
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#pbb">Peran PBB</a></li>
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#kerjasama">Pengertian Umum Kerja Sama</a></li>
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#semua_sdgs">17 Tujuan SDGs</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="dropdown-toggle w-full text-left p-3 rounded-lg bg-sdgs-pink-light font-bold text-pink-700 flex justify-between items-center ring-2 ring-pink-300" data-target="dropdown-analisis">
+                        <span class="truncate"><i class="fas fa-venus-mars mr-3"></i> Fokus SDGs 5 (Gender)</span> <i class="fas fa-chevron-down arrow text-xs ml-2"></i>
+                    </button>
+                    <ul id="dropdown-analisis" class="dropdown-menu ml-4 mt-1 space-y-1 bg-pink-50 rounded-lg p-1 text-gray-600 collapsed">
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#gender_inti">Kesetaraan Gender (Inti)</a></li>
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#terkini">Informasi Terkini Global & Nasional</a></li>
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#tantangan">Tantangan & Potensi</a></li>
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#tindakan">Tindakan Nyata</a></li>
+                        <li><a class="block py-2 px-3 rounded-md hover:bg-pink-200 transition" href="#jenis_kerjasama">Jenis Kerja Sama</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link block p-3 rounded-lg hover:bg-pink-100 transition duration-150 font-semibold" href="#masyarakat"><i class="fas fa-users mr-3 text-teal-600"></i> Peran Masyarakat</a></li>
+                <li><a class="nav-link block p-3 rounded-lg hover:bg-pink-100 transition duration-150 font-semibold" href="#tentang_saya"><i class="fas fa-user-circle mr-3 text-blue-600"></i> Tentang Saya</a></li>
+            </ul>
+        </nav>
+        <div class="content lg:col-span-3 xl:col-span-4 p-4 lg:p-10">
+            <header class="mb-8 rounded-xl shadow-lg overflow-hidden bg-white">
+                <img src="banner.png" alt="Header Visual Proyek SDGs" class="w-full h-auto object-cover main-header-image">
+                <div class="p-6 lg:p-8 bg-purple-50">
+                    <h1 class="text-3xl lg:text-5xl font-extrabold text-purple-800 mb-2 leading-tight project-title">
+                        LANGKAH BERSAMA MENUJU KESETARAAN GENDER
+                    </h1>
+                    <p class="text-lg lg:text-xl font-medium text-pink-600 subtitle">
+                        Tujuan Pembangunan Berkelanjutan (SDGs) 5
+                    </p>
+                    <p class="text-sm text-gray-500 mt-2">
+                        Raquelle Samuel | IX-1/30 | Tugas Kolaborasi IPS, PPKN, & TIK
+                    </p>
+                </div>
+            </header>
+            <section id="salam" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    Salam Redaksi <span class="sdgs-pink">👋</span> | Langkah Bersama Menuju Kesetaraan Gender
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>Selamat datang ke website saya! Di halaman ini, saya akan membahas salah satu SDGs, yaitu Gender Equality (SDGs 5).</p>
+                    <p>Tujuan dari SDGs ini sangat penting karena setiap manusia, laki-laki maupun perempuan, berhak mendapatkan kesempatan yang sama dalam pendidikan, pekerjaan, dan kehidupan sosial tanpa diskriminasi.</p>
+                    <p>Melalui website ini, saya ingin mengajak teman-teman untuk memahami bagaimana kesetaraan gender dapat membawa perubahan positif bagi masyarakat dan lingkungan sekitar kita. Dengan memberikan hak dan kesempatan yang setara, kita bisa menciptakan lingkungan yang adil dan inklusif bagi setiap individu.</p>
+                    <p>Selain itu, saya juga akan membahas contoh-contoh nyata dari kegiatan atau program yang mendukung kesetaraan gender, serta bagaimana kita semua dapat berkontribusi dalam mewujudkan dunia yang lebih setara.</p>
+                    <p class="mt-4 text-xl font-semibold text-pink-600">Selamat membaca!</p>
+                    <p class="text-right italic text-sm text-gray-400 pt-2 border-t mt-4"> Raquelle Samuel IX-1/30</p>
+                </div>
+            </section>
+            <section id="sdgs" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    Penjelasan Umum SDGs <span class="text-blue-500">🌏</span>
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>Kata SDGs adalah singkatan dari Sustainable Development Goals. Ini adalah program global yang diumumkan oleh Perserikatan Bangsa-Bangsa (PBB) pada September 2015 untuk menciptakan dunia yang lebih baik dan adil.</p>
+                    <p>Tujuan SDGs adalah untuk mengatasi berbagai masalah global seperti kemiskinan, ketidaksetaraan, kerusakan lingkungan, keadilan, dan masih banyak lagi. SDGs terdiri dari 17 tujuan dan 169 target yang saling terkait.</p>
+                    <p>Tujuan-tujuan ini memuat berbagai hal yang penting, seperti memberi pendidikan yang layak, menjaga kesehatan, merawat lingkungan sekitar, dan lainnya. Setiap tujuan membantu untuk menciptakan negara, lingkungan, masyarakat yang lebih adil, nyaman dan baik untuk generasi kini dan selanjutnya. </p>
+                </div>
+            </section>
+            <section id="pbb" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    Peran Perserikatan Bangsa-Bangsa (PBB) <span class="text-blue-700">🇺🇳</span>
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>PBB atau Perserikatan Bangsa-Bangsa adalah organisasi internasional yang beranggotakan hampir semua negara di dunia. Tujuan utama PBB adalah menjaga perdamaian, mencegah konflik, dan membantu negara-negara bekerja sama untuk menyelesaikan masalah. PBB juga fokus pada perlindungan hak asasi manusia dan meningkatkan kesejahteraan masyarakat di seluruh dunia.</p>
+                    <div class="p-4 rounded-lg bg-blue-50 border-l-4 border-blue-400 mt-4">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">PBB dan SDGs</h3>
+                        <p>Salah satu program penting PBB adalah SDGs. Melalui SDGs, PBB ingin semua negara bekerja bersama agar semua orang bisa hidup lebih sejahtera. Program ini juga mengajak masyarakat untuk peduli terhadap masalah sosial dan lingkungan.</p>
+                        <p class="mt-2">PBB mendorong setiap negara untuk ikut melaksanakan SDGs melalui kerja sama dan perjanjian internasional. PBB memberikan panduan, pelatihan, dan laporan untuk membantu negara mengetahui kemajuan mereka. Selain itu, PBB juga mengadakan konferensi dan forum supaya negara-negara bisa berbagi pengalaman dan solusi. Masyarakat dan organisasi di tiap negara juga diajak berpartisipasi agar tujuan SDGs bisa tercapai.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="kerjasama" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    Pengertian Umum Kerja Sama <span class="text-green-500">🤝</span>
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>Kerja Sama adalah proses dua pihak atau lebih yang saling bekerja sama untuk mencapai tujuan yang sama. Dalam kerja sama, setiap orang atau kelompok saling membantu, berbagi tugas, dan mendukung satu sama lain agar hasil yang dicapai lebih baik dibandingkan jika dikerjakan sendiri.</p>
+                    <p>Kerja sama bisa terjadi di berbagai bidang, seperti di sekolah, keluarga, masyarakat, maupun lingkungan kerja. Dengan kerja sama, pekerjaan menjadi lebih mudah, efisien, dan menghasilkan hasil yang lebih maksimal.</p>
+                </div>
+            </section>
+            <section id="semua_sdgs" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    17 Tujuan Pembangunan Berkelanjutan (SDGs)
+                </h2>
+                <div class="text-gray-600">
+                    <p class="mb-4">Terdapat 17 tujuan yang saling terkait. Fokus proyek kita adalah pada tujuan ke-5, Kesetaraan Gender.</p>
+                    <ol class="sdgs-list list-decimal list-inside space-y-2 pl-4">
+                        <li><span class="font-semibold text-red-500">Tanpa Kemiskinan</span> - mengurangi dan mengakhiri kemiskinan dalam segala bentuk agar semua orang di seluruh dunia dapat hidup dengan layak.</li>
+                        <li><span class="font-semibold text-yellow-600">Tanpa Kelaparan</span> - memastikan semua orang mendapatkan makanan yang cukup dan bergizi, dan mempromosikan pertanian berkelanjutan pada tahun 2030.</li>
+                        <li><span class="font-semibold text-green-500">Hidup Sehat dan Sejahtera</span> - bertujuan untuk meningkatkan kesehatan masyarakat dan kesejahteraan secara keseluruhan.</li>
+                        <li><span class="font-semibold text-red-700">Pendidikan Berkualitas</span> - memberi pendidikan yang adil, berkualitas, dan mudah diakses oleh semua orang, mau muda maupun tua.</li>
+                        <li class="p-2 rounded-lg bg-pink-100 border-l-4 border-sdgs-pink font-extrabold text-pink-700">
+                            <span class="font-extrabold">Kesetaraan Gender</span> - menjamin hak dan kesempatan yang setara bagi perempuan dan lelaki dalam setiap bidang kehidupan. <span class="sdgs-pink">📌</span>
+                        </li>
+                        <li><span class="font-semibold text-blue-500">Air Bersih dan Sanitasi Layak</span> - menyediakan akses air bersih dan fasilitas sanitasi yang aman untuk semua orang.</li>
+                        <li><span class="font-semibold text-yellow-400">Energi Bersih dan Terjangkau</span> - memastikan semua orang mendapatkan energi yang aman, terjangkau, dan ramah lingkungan.</li>
+                        <li><span class="font-semibold text-lime-600">Pekerjaan Layak dan Pertumbuhan Ekonomi</span> - mendorong ekonomi yang berkembang dan menyediakan pekerjaan yang aman dan layak.</li>
+                        <li><span class="font-semibold text-orange-500">Industri, Inovasi, dan Infrastruktur</span> - membangun infrastruktur yang kuat, mendukung inovasi, dan pengembangan industri.</li>
+                        <li><span class="font-semibold text-rose-500">Mengurangi Ketimpangan</span> - mengurangi perbedaan sosial dan ekonomi di dalam negara maupun antarnegara.</li>
+                        <li><span class="font-semibold text-yellow-700">Kota dan Permukiman Berkelanjutan</span> - menciptakan kota yang aman, nyaman, dan ramah lingkungan.</li>
+                        <li><span class="font-semibold text-green-700">Konsumsi dan Produksi yang Bertanggung Jawab</span> - mengurangi sampah dan menggunakan sumber daya alam dengan lebih bijak.</li>
+                        <li><span class="font-semibold text-teal-500">Penanganan Perubahan Iklim</span> - mengambil tindakan untuk melawan dampak perubahan iklim demi melindungi bumi.</li>
+                        <li><span class="font-semibold text-blue-900">Ekosistem Lautan</span> - menjaga kelestarian laut dan kehidupan didalamnya agar tetap sehat.</li>
+                        <li><span class="font-semibold text-green-800">Ekosistem Daratan</span> - melindungi hutan, tanah, hewan, dan tumbuhan agar ekosistem tetap seimbang.</li>
+                        <li><span class="font-semibold text-indigo-700">Perdamaian, Keadilan, dan Kelembagaan yang Kuat</span> - mewujudkan masyarakat yang aman, adil, dan lembaga pemerintahan yang terpercaya.</li>
+                        <li><span class="font-semibold text-blue-900">Kemitraan untuk Mencapai Tujuan</span> - mendorong kerja sama antarnegara, organisasi, dan masyarakat untuk mencapai semua tujuan SDGs.</li>
+                    </ol>
+                </div>
+            </section>
+            <section id="gender_inti" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title title-sdgs5 text-3xl font-bold text-pink-700 mb-4 pb-2 border-b-2 border-pink-500">
+                    <i class="fas fa-venus-mars mr-2"></i> Fokus Inti: Kesetaraan Gender
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>Tujuan 5 berfokus pada mencapai kesetaraan gender dan memberdayakan semua perempuan dan anak perempuan. Target utamanya meliputi mengakhiri segala bentuk diskriminasi, menghapuskan kekerasan terhadap perempuan, mengakui pekerjaan rumah tangga yang tidak dibayar, dan memastikan partisipasi penuh perempuan dalam kepemimpinan dan pengambilan keputusan di semua tingkatan. </p>
+                    <p>Mencapai kesetaraan gender bukan hanya hak asasi manusia, tetapi juga fondasi penting untuk mencapai perdamaian, kesejahteraan, dan pembangunan berkelanjutan di seluruh dunia.</p>
+                </div>
+            </section>
+            <section id="terkini" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title title-sdgs5 text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    <i class="fas fa-chart-line mr-2 sdgs-pink"></i> Informasi Terkini SDGs 5 (Global & Nasional)
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <div class="p-4 rounded-lg bg-red-50 border-l-4 border-red-500">
+                        <p class="font-semibold text-red-700">Status Global:</p>
+                        <p>Laporan Gender Snapshot 2025 dari PBB menunjukkan bahwa kemajuan menuju Kesetaraan Gender sangat lambat. Tidak ada satu pun indikator kesetaraan gender saat ini berada di jalur yang akan tercapai tepat waktu.</p>
+                        <p class="mt-2">Kesenjangan digital gender menjadi perhatian besar. PBB memperkirakan bahwa jika kesenjangan ini bisa ditutup, bisa mengangkat 343,5 juta perempuan dan anak perempuan keluar dari kemiskinan dan menambah 1,5 triliun USD ke PDB global. Faktor-faktor seperti konflik, pemotongan dana, dan reaksi balik terhadap hak-hak perempuan memperparah situasi.</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-green-50 border-l-4 border-green-500">
+                        <p class="font-semibold text-green-700">Status di Indonesia:</p>
+                        <p>Menurut Global Gender Gap Report 2025, Indonesia berada di peringkat ke-97 dari 148 negara, menunjukkan masih banyak pekerjaan rumah untuk mencapai kesetaraan gender. Pemerintah Indonesia terus mendorong pemberdayaan perempuan melalui kebijakan gender mainstreaming, program pendidikan, dan dukungan kerja sama antar lembaga untuk mempercepat pencapaian SDGs 5.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="tantangan" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title title-sdgs5 text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    <i class="fas fa-balance-scale mr-2 sdgs-pink"></i> Tantangan & Potensi SDGs 5
+                </h2>
+                <div class="space-y-6">
+                    <div class="p-4 rounded-lg bg-yellow-50 border-l-4 border-yellow-500">
+                        <h3 class="text-xl font-semibold text-yellow-700 mb-2">Tantangan Utama</h3>
+                        <div class="text-gray-600">
+                            <p>Program SDGs 5 menghadapi beberapa tantangan, seperti diskriminasi dan norma sosial yang membatasi peran perempuan. Kesenjangan ekonomi, akses pendidikan, dan teknologi juga membuat perempuan sulit mendapatkan kesempatan yang setara dengan lelaki. Konflik, bencana, dan hukum yang tidak mendukung kesetaraan gender turut memperlambat pencapaian tujuan ini.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-lg bg-green-50 border-l-4 border-green-500">
+                        <h3 class="text-xl font-semibold text-green-700 mb-2">Potensi dan Pencapaian</h3>
+                        <div class="text-gray-600">
+                            <p>Kesetaraan gender memiliki potensi yang besar untuk meningkatkan kesejahteraan masyarakat dan pertumbuhan ekonomi. Jika perempuan mendapatkan kesempatan yang sama dalam pendidikan dan pekerjaan, produktivitas nasional akan meningkat dan kemiskinan akan berkurang.</p>
+                            <p class="mt-2">Beberapa kemajuan sudah terlihat, seperti meningkatnya keterlibatan perempuan di bidang pendidikan dan politik. Di Indonesia, pemerintah aktif mendorong program gender mainstreaming dan pemberdayaan perempuan melalui berbagai kebijakan dan program, meskipun masih ada tantangan yang harus diatasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="tindakan" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title title-sdgs5 text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    <i class="fas fa-rocket mr-2 sdgs-pink"></i> Tindakan Nyata dan Rencana ke Depan
+                </h2>
+                <div class="space-y-6">
+                    <div class="p-4 rounded-lg bg-purple-50 border-l-4 border-purple-500">
+                        <h3 class="text-xl font-semibold text-purple-700 mb-2">Tindakan yang Sudah Dilakukan</h3>
+                        <div class="text-gray-600">
+                            <p>Beberapa tindakan nyata yang sudah dilakukan untuk SDG 5 adalah memberi edukasi tentang kesetaraan gender, menyediakan pelatihan untuk perempuan, membuka kesempatan kerja yang lebih adil, dan melakukan kampanye anti-kekerasan.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-lg bg-purple-50 border-l-4 border-purple-500">
+                        <h3 class="text-xl font-semibold text-purple-700 mb-2">Rencana Tindakan ke Depan</h3>
+                        <div class="text-gray-600">
+                            <p>Ke depannya, tindakan yang akan dilakukan termasuk memperluas akses pendidikan dan teknologi bagi perempuan, membuat aturan yang lebih melindungi perempuan, meningkatkan jumlah perempuan pemimpin, serta mengajak masyarakat terus mendukung kesetaraan gender.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="jenis_kerjasama" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    <i class="fas fa-sitemap mr-2 sdgs-pink"></i> Merupakan Kerja Sama Apa?
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>SDG 5 termasuk kerja sama multilateral karena dijalankan oleh banyak negara di bawah koordinasi PBB untuk mencapai kesetaraan gender secara global.</p>
+                    <p>Kerja sama ini mencakup berbagi data, membuat kebijakan bersama, dan saling membantu melalui program internasional agar perempuan dan laki-laki mendapatkan hak yang sama. Contoh konkretnya adalah program UN Women yang mendukung pemberdayaan perempuan di berbagai negara, pelatihan kepemimpinan bagi perempuan di Asia, serta kerja sama antarnegara untuk mengurangi kekerasan terhadap perempuan melalui kampanye internasional dan penyusunan undang-undang yang lebih melindungi hak perempuan.</p>
+                </div>
+            </section>
+            <section id="masyarakat" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    <i class="fas fa-heart mr-2 sdgs-pink"></i> Peran Masyarakat
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>Masyarakat punya peran penting untuk membantu mencapai program SDGs, karena perubahan besar bisa dimulai dari kebiasaan sehari-hari. Kita bisa ikut berkontribusi dengan menjaga lingkungan, menghargai perempuan dan laki-laki secara adil, serta membantu orang-orang di sekitar yang membutuhkan.</p>
+                    <p>Selain itu, masyarakat juga bisa mendukung kegiatan sosial, mengikuti program pemerintah, atau menyebarkan informasi positif tentang SDGs. Kalau semua orang ikut terlibat dan bekerja sama, tujuan SDGs bisa lebih cepat tercapai dan membuat kehidupan menjadi lebih baik untuk semua.</p>
+                </div>
+            </section>
+            <section id="tentang_saya" class="content-section bg-white p-6 lg:p-8 rounded-xl shadow-md mb-8">
+                <h2 class="section-title text-2xl lg:text-3xl font-bold text-gray-700 mb-4 pb-2 border-b-2 border-pink-300">
+                    <i class="fas fa-graduation-cap mr-2 sdgs-pink"></i> Tentang Saya
+                </h2>
+                <div class="text-gray-600 space-y-4">
+                    <p>Halo semua! Saya Raquelle dari kelas 91 absen 30. Saya membuat website ini sebagai bagian dari tugas kolaborasi mata pelajaran IPS, PPKN, dan TIK. Melalui tugas ini, saya ingin menunjukkan pemahaman saya tentang SDGs, khususnya SDG 5 tentang Kesetaraan Gender.</p>
+                    <p>Saya memilih topik ini karena menurut saya kesetaraan gender penting untuk menciptakan lingkungan yang adil, aman, dan memberi kesempatan yang sama untuk semua orang.</p>
+                    <div class="p-4 rounded-lg bg-pink-100 border-l-4 border-pink-500 mt-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">Pelajaran dari Pengalaman Pribadi</h3>
+                        <p>Saya sering dikatakan tidak kuat oleh kakak dan papa saya, dan mereka berpikir bahwa mengangkat barang adalah pekerjaan “laki-laki”. Namun, saya membuktikan mereka salah dengan ikut mengangkat barang dan menyelesaikan tugas tersebut dengan baik.</p>
+                        <p class="mt-2">Dari pengalaman ini, saya belajar bahwa kesetaraan gender berarti perempuan juga mampu melakukan pekerjaan yang dianggap “hanya untuk laki-laki” dan bisa menunjukkan kemampuan sama seperti laki-laki.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer class="bg-purple-800 text-white p-6 text-center">
+        <p class="back-to-top mb-2">
+            <a href="#top" class="text-pink-300 hover:text-pink-100 transition duration-150 font-semibold flex items-center justify-center">
+                <i class="fas fa-arrow-up mr-2"></i> Kembali ke atas
+            </a>
+        </p>
+        <p class="text-sm text-purple-300">&copy; Web Proyek Raquelle Samuel.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            const mobileToggle = document.getElementById('mobileToggle');
+            const menuContent = document.getElementById('menuContent');
+
+            dropdownToggles.forEach(toggle => {
+                const targetId = toggle.getAttribute('data-target');
+                const targetMenu = document.getElementById(targetId);
+
+                if (targetMenu) {
+                    targetMenu.style.maxHeight = '0';
+                    targetMenu.classList.add('collapsed');
+                }
+
+                toggle.addEventListener('click', () => {
+                    if (targetMenu) {
+                        const isCollapsed = targetMenu.classList.contains('collapsed');
+                        const arrowIcon = toggle.querySelector('.arrow');
+
+                        if (isCollapsed) {
+                            targetMenu.style.maxHeight = targetMenu.scrollHeight + "px";
+                            targetMenu.classList.remove('collapsed');
+                            if (arrowIcon) arrowIcon.style.transform = 'rotate(180deg)';
+                        } else {
+                            targetMenu.style.maxHeight = '0';
+                            targetMenu.classList.add('collapsed');
+                            if (arrowIcon) arrowIcon.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                });
+            });
+            if (mobileToggle && menuContent) {
+                if (window.innerWidth < 1024) {
+                     menuContent.classList.add('side-menu-mobile-hidden');
+                     mobileToggle.querySelector('i').classList.remove('fa-times');
+                     mobileToggle.querySelector('i').classList.add('fa-bars');
+                }
+                
+                mobileToggle.addEventListener('click', () => {
+                    menuContent.classList.toggle('side-menu-mobile-hidden');
+                    const icon = mobileToggle.querySelector('i');
+                    if (menuContent.classList.contains('side-menu-mobile-hidden')) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    } else {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    }
+                });
+                document.querySelectorAll('.nav-link, .dropdown-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth < 1024) {
+                            menuContent.classList.add('side-menu-mobile-hidden');
+                            mobileToggle.querySelector('i').classList.remove('fa-times');
+                            mobileToggle.querySelector('i').classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
